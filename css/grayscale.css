@@ -59,7 +59,7 @@ a:hover,a:focus {
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: Helvetica,Arial,sans-serif;
-    background-color: rgba(0, 0, 0, 0.3);;
+    background-color: rgba(0, 0, 0, 0.4);;
 
 }
 
@@ -116,7 +116,7 @@ a:hover,a:focus {
 }
 
 .navbar-custom .nav li.active a {
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(0,0,0,.4);
 }
 
 .navbar-custom .nav li.active a:hover {
@@ -194,41 +194,67 @@ a:hover,a:focus {
     }
 }
 
-.btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid #fff;
-    border-radius: 100%!important;
-    font-size: 40px;
-    color: #fff;
-    background: 0 0;
-    transition: background .3s ease-in-out;
-}
-
-.btn-circle:hover,
-.btn-circle:focus {
-    outline: 0;
-    color: #fff;
-    background: rgba(255,255,255,.1);
-}
-
-
-
 .content-section {
     padding-top: 100px;
 }
 
-.download-section {
+.what-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background: url(../img/whatimage.jpg) no-repeat center center scroll;
     background-color: #000;
     background-size: cover;
 }
 
+/*------Gallery------*/
+.container-fluid{
+  padding-top: 100px;
+  filter: grayscale(100%);
+}
+
+@media(min-width:768px) {
+    .container-fluid {
+        padding-top: 250px;
+        filter: grayscale(100%);
+    }
+  }
+
+.image-block {
+    border: 0px;
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    height:200px;
+    text-align: right;
+    vertical-align: bottom;
+    font-weight: bold;
+    font-size: 19px;
+    padding-top: 160px;
+    padding-right: 20px;
+    color: transparent;
+    font-family: Helvetica,Arial,sans-serif;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.image-block:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%); /*chrome, safari, opera*/
+    color: white;
+}
+
+.image-block:target {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%); /*chrome, safari, opera*/
+    color: white;
+}
+.image-block:active {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%); /*chrome, safari, opera*/
+    color: white;
+}
+/*--------Mappa-------*/
 #map {
     width: 100%;
     height: 200px;
@@ -240,8 +266,9 @@ a:hover,a:focus {
         padding-top: 250px;
     }
 
-    .download-section {
+    .what-section {
         padding: 100px 0;
+        background-attachment: fixed;
     }
 
     #map {
