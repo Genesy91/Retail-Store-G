@@ -24,13 +24,18 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 // Script that resizes gallry images on click
+if($(window).width()<768){
 $(document).ready(function(){
     $('.img-animated').click(function(){
-      $(".img-animated").removeClass('img-gallery-active');
-      $(this).addClass('img-gallery-active');
-      $('#indirizzo').text($(this).attr('alt'));
+      $(".img-animated").height(60);
+      $(".img-animated").removeClass('img-animated-clicked');
+      $(this).height(600);
+      $(this).addClass('img-animated-clicked');
+      //$('#indirizzo').text($(this).attr('alt'));
     });
 });
+}
+
 
 // Google Maps Scripts
 // When the window has finished loading create our google map below
@@ -48,7 +53,7 @@ function init() {
 
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
-        scrollwheel: true,
+        scrollwheel: false,
         draggable: true,
 
         // How you would like to style the map.
